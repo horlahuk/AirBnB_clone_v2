@@ -3,6 +3,7 @@
 from models.base_model import BaseModel
 from sqlalchemy import Column, String, ForeignKey
 from models import storage_type
+from uuid import uuid4
 
 
 class Review(BaseModel):
@@ -13,7 +14,7 @@ class Review(BaseModel):
         user_id = Column(String(60), ForeignKey('users.id'), nullable=False)
         text = Column(String(1024), nullable=False)
 
-            def __init__(self, **kwargs):
+        def __init__(self, **kwargs):
             self.id = str(uuid4())
             for key, value in kwargs.items():
                 setattr(self, key, value)
