@@ -6,7 +6,7 @@ from fabric.api import local
 
 
 def do_pack():
-    """ Create a tgz archive of the web static dir"""
+    """Generate an tgz archive from web_static folder"""
     dt = datetime.now()
     file = "versions/web_static_{}{}{}{}{}{}".format(dt.year,
                                                      dt.month,
