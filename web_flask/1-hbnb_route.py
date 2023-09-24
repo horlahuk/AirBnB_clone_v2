@@ -12,6 +12,7 @@ def greet():
     """display hello HBNB"""
     return "Hello HBNB"
 
+
 @app.route("/hbnb", strict_slashes=False)
 def hbnb():
     """display HBNB"""
